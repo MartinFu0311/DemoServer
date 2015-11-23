@@ -61,5 +61,6 @@
     <!-- Add packages here -->
     
     <include file="/chapterTwo/chapterTwo.xml" />
+    <include file="/chapterThree/chapterThree.xml" />
 
 </struts>
