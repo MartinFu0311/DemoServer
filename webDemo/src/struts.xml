@@ -59,5 +59,7 @@
     <include file="example.xml"/> -->
 
     <!-- Add packages here -->
+    
+    <include file="/chapterTwo/chapterTwo.xml" />
 
 </struts>
