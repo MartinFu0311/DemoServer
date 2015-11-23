@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.locale" value="zh-CN" />
+    <constant name="struts.i18n.encoding" value="gb2312" />
+    
+    <package name="helloworld" extends="struts-default">
+    	<global-results>
+    		<result name="toLogin">/login.jsp</result>
+    	</global-results>
+    	<action name="helloworldAction" class="webDemo.Action.HelloWorldAction">
+    		<result name="toWelcome">/s2impl/welcome.jsp</result>
+    	</action>
+    	<action name="helloworld2Action" class="webDemo.Action.HelloWorld2Action">
+    		<result name="toWelcome">/s2impl/welcome2.jsp</result>
+    	</action>
+    	<action name="helloworld3Action" class="webDemo.Action.HelloWorld3Action">
+    		<result name="toWelcome">/s2impl/welcome3.jsp</result>
+    	</action>
+    	<action name="helloworld4Action" class="webDemo.Action.HelloWorld4Action">
+    		<result name="toWelcome">/s2impl/welcome3.jsp</result>
+    	</action>
+    	<action name="*_*" class="webDemo.Action.{1}Action" method="{2}">
+    		<result name="toWelcome">/s2impl/welcome3.jsp</result>
+    	</action>
+    	<action name="helloworld6Action" class="webDemo.Action.HelloWorld6Action">
+    		<exception-mapping result="math-exception" exception="java.lang.ArithmeticException"></exception-mapping>
+    		<result name="toWelcome" type="redirect">/s2impl/welcome6.jsp?account=${hwm.account}</result>
+    		<result name="math-exception">/s2impl/error.jsp</result>
+    	</action>
+    </package>
+
+    <!-- package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index" />
+
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <action name="index">
+            <result type="redirectAction">
+                <param name="actionName">HelloWorld</param>
+                <param name="namespace">/example</param>
+            </result>
+        </action>
+    </package>
+
+    <include file="example.xml"/> -->
+
+    <!-- Add packages here -->
+
+</struts>
