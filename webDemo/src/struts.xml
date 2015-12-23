@@ -62,5 +62,7 @@
     
     <include file="/chapterTwo/chapterTwo.xml" />
     <include file="/chapterThree/chapterThree.xml" />
+    <include file="/chapterFour/chapterFour.xml" />
+    <include file="/chapterFive/chapterFive.xml" />
 
 </struts>

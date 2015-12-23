@@ -1,12 +1,16 @@
 package chapterTwo;
 
-public class HelloWorld {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloWorld extends ActionSupport {
 	
 	private static final String GREETING = "Hello ";
 	
 	public String execute(){
 		
-		setCustomGreeting(GREETING + getName());
+		String msg = getText("user.exists");
+		//setCustomGreeting(GREETING + getName());
+		setCustomGreeting(msg);
 		return "SUCCESS";
 	}
 	
