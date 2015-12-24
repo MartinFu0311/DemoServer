@@ -4,8 +4,18 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>	
 	<package name="chapterFive" namespace="/chapterFive" extends="struts-default">
-		<action name="ArraysDataTransferTest" class="chapterFive.ArrayDataTransfer">
+		<action name="ArraysDataTransferTest">
 			<result>/chapterFive/ArraysDataTransferTest.jsp</result>
+    	</action>
+    	<action name="ArraysDataTransferSuccess"  class="chapterFive.ArrayDataTransfer">
+			<result>/chapterFive/ArraysDataTransferSuccess.jsp</result>
+    	</action>
+    	
+    	<action name="ListDataTransferTest">
+			<result>/chapterFive/ListDataTransferTest.jsp</result>
+    	</action>
+    	<action name="ListDataTransferSuccess" class="chapterFive.ArrayDataTransfer">
+			<result>/chapterFive/ListDataTransferSuccess.jsp</result>
     	</action>
 	</package>
 </struts>
